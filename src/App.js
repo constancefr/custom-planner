@@ -1,23 +1,30 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import TaskList from './components/TaskList';
+import TaskDetails from './components/TaskDetails';
+import Calendar from './components/Calendar';
 
 function App() {
+
+  const [selectedTask, setSelectedTask] = useState(null);
+
+  const handleTaskClick = (task) => {
+    setSelectedTask(task);
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="left-panel">
+        <div className="top-panel">
+          <TaskDetails selectedTask={selectedTask} />
+        </div>
+        <div className="bottom-panel">
+          <TaskList onTaskClick={handleTaskClick} />
+        </div>
+      </div>
+      <div className="right-panel">
+        <Calendar />
+      </div>
     </div>
   );
 }

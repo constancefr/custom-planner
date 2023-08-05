@@ -1,0 +1,29 @@
+.task-details {
+  height: 40vh;
+}
+
+.task-details h2 {
+  font-size: 20px;
+  margin-bottom: 25px;
+}
+
+.task-details h3 {
+  margin: 10;
+  font-size: 15px;
+  padding-bottom: 5px;
+}
+
+.task-details p {
+  margin: 10;
+  font-size: 15px;
+  font-style: italic;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+
+.task-details .subtasks {
+  height: calc(40vh - 200px);
+  overflow-y: auto; /* vertical scrolling */
+}

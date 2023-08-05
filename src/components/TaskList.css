@@ -1,0 +1,13 @@
+.task-list {
+  height: 40vh;
+}
+
+.task-list .task-objects {
+  height: calc(40vh - 40px); /* fixed height for the panel */
+  overflow-y: auto; /* vertical scrolling */
+}
+
+.task-list h2 {
+  font-size: 20px;
+  margin-bottom: 25px;
+}
